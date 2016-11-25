@@ -9,13 +9,11 @@
 
 (defn game-loop
   [scr board]
-  (do
-   (println board "!")
    (recur 
     scr 
     (ui/draw-board
      scr x y
-     (g/game-step (s/get-key-blocking scr) board)))))
+     (g/game-step (s/get-key-blocking scr) board))))
   
 (defn -main []
   (do
