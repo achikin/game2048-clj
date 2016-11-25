@@ -6,6 +6,6 @@ clojure-lanterna is used as a java curses library
 
 `lein run`
 
-Then you can go to [http://localhost:400](http://localhost:4000) to view/change the code with [NightLight](https://sekao.net/nightlight/) editor.
+Then you can go to [http://localhost:4000](http://localhost:4000) to view/change the code with [NightLight](https://sekao.net/nightlight/) editor.
 ## Flowchart
 ![Game flowchart](/docs/flowchart.png)
