@@ -5,3 +5,5 @@ clojure-lanterna is used as a java curses library
 ## Usage
 
 `lein run`
+## Flowchart
+![Game flowchart](/docs/flowchart.png)
