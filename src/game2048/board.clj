@@ -80,8 +80,6 @@ back into map"
     :horizontal
     :vertical))
 
-(which-partition :left)
-
 "Up movement is eqivalent to left movement
 and down movement equivalent to right movement"
 (def dir-map 
