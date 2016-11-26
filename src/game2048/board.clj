@@ -101,7 +101,7 @@ perform move on each slice, and gather result back into new board"
 (defn full?
   "True if there are no empty(0) fields left"
   [board]
-  (empty? (filter #(= 0 %) (:data board))))
+  (not-any? #{0} (:data board)))
 
 (defn contains-max?
   "True if one of the sells reached maximum value"

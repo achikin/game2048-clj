@@ -5,7 +5,7 @@
 (def maxlen 5)
 
 (defn count-digits [n] 
-  (if (= n 0) 1
+  (if (zero? n) 1
    (-> n Math/log10 Math/floor long inc)))
 
 (defn repeat-str
