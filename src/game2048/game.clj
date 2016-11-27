@@ -12,7 +12,7 @@
 
 (defn new-board []
   (b/add-random-tiles (b/empty-board board-size)))
-  
+
 (defn process-key
   "Either exit or transform board according to a key passed"
   [key board]
@@ -30,9 +30,8 @@
     (b/full? board-after-rand) (new-board)
     (b/contains-max? max-score board) (new-board)
     :else board-after-rand)))
-        
+
 (defn game-step
   [key board]
   (check-board board
     (process-key key board)))
-
