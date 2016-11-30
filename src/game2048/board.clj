@@ -80,8 +80,8 @@ back into map"
     :horizontal
     :vertical))
 
-"Up movement is eqivalent to left movement
-and down movement equivalent to right movement"
+;Up movement is eqivalent to left movement
+;and down movement equivalent to right movement
 (def dir-map
   {:up :left
    :down :right
