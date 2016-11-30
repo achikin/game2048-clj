@@ -25,11 +25,11 @@
   "Check for logical conditions and transform board accordingly"
   [board-before-keypress board]
   (let [board-after-rand (b/add-random-tiles board)]
-   (cond
-    (= board-before-keypress board) board
-    (b/full? board-after-rand) (new-board)
-    (b/contains-max? max-score board) (new-board)
-    :else board-after-rand)))
+    (cond
+      (= board-before-keypress board) board
+      (b/full? board-after-rand) (new-board)
+      (b/contains-max? max-score board) (new-board)
+      :else board-after-rand)))
 
 (defn game-step
   [key board]
