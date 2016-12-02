@@ -1,14 +1,17 @@
 (ns game2048.row)
 
-(defmulti padd (fn [direction len coll] direction))
-"Pad collections with zeroes either on the left or on the right"
-(defmethod padd :left
-  [direction len coll]
-  (concat (repeat (- len (count coll)) 0) coll))
-(defmethod padd :right
-  [direction len coll]
-  (concat coll (repeat (- len (count coll)) 0)))
-  
+(defn missing-zeroes
+  "Return list of zeroes needed to pad row to it's initial length"
+  [len row]
+  (repeat (- len (count row)) 0))
+
+(defn padd
+  "Pad row with missing zeroes either from right or left"
+  [dir len row]
+  (let [missing (missing-zeroes len row)]
+    (case dir)
+    :left (concat missing row)
+    :right (concat row missing)))  
 
 (defmulti merger(fn [dir & args] dir))
 "Check if there are equal adjustent fields and merge them
