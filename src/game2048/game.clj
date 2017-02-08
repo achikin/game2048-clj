@@ -19,7 +19,8 @@
   (case key
     (:up :down :left :right) (b/make-move key board)
     \q (System/exit 0)
-    \r (b/empty-board board-size)))
+    \r (b/empty-board board-size)
+    board))
 
 (defn check-board
   "Check for logical conditions and transform board accordingly"
