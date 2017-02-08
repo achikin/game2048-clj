@@ -9,9 +9,9 @@
   "Pad row with missing zeroes either from right or left"
   [dir len row]
   (let [missing (missing-zeroes len row)]
-    (case dir)
-    :left (concat missing row)
-    :right (concat row missing)))  
+    (case dir
+      :left (concat missing row)
+      :right (concat row missing))))  
 
 (defmulti merger(fn [dir & args] dir))
 "Check if there are equal adjustent fields and merge them
