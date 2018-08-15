@@ -2,7 +2,7 @@
 
 A Clojure version of 2048 with terminal output.
 
-[Clojure-lanterna](http://sjl.bitbucket.org/clojure-lanterna/) is used as a java curses library.
+[Clojure-lanterna](https://github.com/MultiMUD/clojure-lanterna) is used as a java curses library.
 ## Usage
 
 `lein run`
