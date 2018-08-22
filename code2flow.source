@@ -1,0 +1,30 @@
+start:
+Create empty board;
+Add random tile;
+game_loop:
+Draw board;
+Read user input;
+switch (key) {
+  case Q:
+    exit;
+    return
+    break;
+  case R:
+    goto start;
+  case ←,↑,→,↓:
+    Make move on board;
+}
+
+if (Board changed?) {
+  if (Board contains 2048?) {
+    Draw win screen;
+    goto start;
+  }
+  Add random tile;
+  if (Board is full?) {
+    Draw game over;
+    goto start;
+  }
+}
+goto game_loop;
+
